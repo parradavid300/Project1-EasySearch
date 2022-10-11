@@ -1,8 +1,13 @@
 
 
-
-
+.hero-body {
+    margin-bottom: 125px;
+}
+.input {
+    width: 300px;
+}
 
 .button {
-    margin-top: 15px;
+    
+    width: 75px;
 }
