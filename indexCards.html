@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EasySearchResults</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="./assets/styleCards.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EasySearch</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="./assets/styleCards.css">
 </head>
-<body>
+<body id="outputPage">
+  <button id="clearButton">Clear LS</button>
+  <button id="againButton">Search Again</button>
     <section class="hero has-background-white-ter is-fullheight">
         <!-- Hero head: will stick at the top -->
         <div class="hero-head">
@@ -44,64 +47,21 @@
       
         <!-- Hero content: will be in the middle -->
         <div class="hero-body">
-          <div class=" card container ">
-                <div class="card">
-                    <header class="card-header">
-                      <p class="card-header-title">
-                        <!-- website url goes here -->
-                      </p>
-                      <button class="card-header-icon" aria-label="more options">
-                        <span class="icon">
-                            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-                        </span>
-                      </button>
-                    </header>
-                    <div class="card">
-                        <div class="card-content">
-                          <div class="content">
-                            <!-- website summary goes here -->
-                          </div>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="card">
-                    <header class="card-header">
-                      <p class="card-header-title">
-                        <!-- website url goes here -->
-                      </p>
-                      <button class="card-header-icon" aria-label="more options">
-                        <span class="icon">
-                          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-                        </span>
-                      </button>
-                    </header>
-                    <div class="card">
-                        <div class="card-content">
-                          <div class="content">
-                            <!-- website summary goes here -->
-                          </div>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="card">
-                    <header class="card-header">
-                      <p class="card-header-title">
-                        <!-- website url goes here -->
-                      </p>
-                      <button class="card-header-icon" aria-label="more options">
-                        <span class="icon">
-                          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-                        </span>
-                      </button>
-                    </header>
-                    <div class="card">
-                        <div class="card-content">
-                          <div class="content">
-                            <!-- website summary goes here -->
-                          </div>
-                        </div>
-                      </div>
-                  </div>
+            <div class="container  ">
+                <div class="notification has-text-centered is-flex is-flex-direction-column is-align-items-center ">
+                    <p class="title fa-solid f-font has-text-grey">
+                        Ez Search
+                    </p>
+                    <p class="subtitle">
+                        Type a topic, press search, and let us bring you the news!
+                    </p>  
+                    <div class="text container is-flex is-flex-direction-row is-justify-content-center  ">
+                        <input id='searchBar' class="input is-rounded is-info" type="text" placeholder="Type a Topic">
+                        <button id='searchButton' class="button is-rounded is-info  " href="indexCards.html">Search</button>
+                    </div> 
+                </div>
+        </div>
+          <div id='card container'class=" card container "></div>
            
           </div>
         </div>
@@ -122,5 +82,8 @@
           </nav>
         </div> -->
       </section>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="./assets/script.js"></script>
 </body>
+
 </html>
