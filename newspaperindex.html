@@ -11,13 +11,14 @@
     <link rel="stylesheet" href="./assets/styleCards.css">
 </head>
 
-<body class="body ">
+<body>
+  
     <!-- All Navbar -->
-    <nav class="navbar  " role="navigation" aria-label="main navigation">
+    <nav class="navbar " role="navigation" aria-label="main navigation">
         <div class="navbar-brand ">
-            <div class="navbar-item" >
+            <a class="navbar-item" href="https://bulma.io">
                 <h1 class="header fa-solid f-font has-text-grey is-size-1 ">Ez Search</h1>
-            </div>
+            </a>
 
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
                 data-target="navbarBasicExample">
@@ -29,18 +30,12 @@
 
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-end">
-                <button id="clearButton">Clear LS</button>
-                <button id="againButton">Search Again</button>
-                <a class="navbar-item ">
-                    Home
-                </a>
+                <a class="navbar-item"id="clearButton">Clear LS</a>
+                <a class="navbar-item"id="againButton">Search Again</a>
+
 
                 <a class="navbar-item" id="about-modal">
                     About
-                </a>
-
-                <a class="navbar-item">
-                    Contact Us
                 </a>
 
             </div>
@@ -53,14 +48,20 @@
 
     <div class="text column is-flex is-flex-direction-row is-flex-wrap-wrap is-mobile is-flex-wrap-wrap">
         <input id='searchBar' class="input is-rounded is-info" type="text" placeholder="Type a Topic">
-        <button id='searchButton' class="button is-rounded is-info ">Search</button>
-      
+        <button id='searchButton' class="button is-rounded is-info  ">Search</button>
+        
+   
+        <div class="subtitle column is-flex is-flex-direction-row  ">
+            <!-- <p class="subtitle ">
+            Type a topic and press Search!
+          </p> -->
+        </div>
     </div>
     <hr class="has-background-grey-light" style="padding-top: 0px; margin:0; height: 1px;">
     <hr class="has-background-grey-light" style="padding-top: 0px; margin:0; height: 1px;">
     <!-- Section for collumns -->
-    <section class="column is-shadowless ">
-        <div class="columns  ">
+    <section class="column  ">
+        <div class="columns ">
             <div class="column" id="column0">
                 
             </div>
@@ -83,10 +84,9 @@
                 
             </div>
         </div>
-
+        
     </section>
-    main
-    
+    <hr class="has-background-grey-light" style="padding-top: 0px; margin:0; height: 1px;">
     <!-- Modal Section -->
     <div class="modal">
         <div class="modal-background"></div>
@@ -95,7 +95,7 @@
             <p class="modal-card-title">About Section</p>
           </header>
           <section class="modal-card-body">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos animi rerum dolore repellendus aliquid modi voluptate itaque amet magni omnis nisi at numquam in facere, maxime rem alias quasi perferendis!</p>
+            <p>Project created as a first project for UT Austin's Web Development Bootcamp. Type in a topic and recieve a news article summarized back!</p>
           </section>
           </footer>
         </div>
@@ -107,10 +107,36 @@
         <div class="modal-background" id="modal-backgroundTwo"></div>
         <div class="modal-card">
           <header class="modal-card-head">
-            <p class="modal-card-title">Error</p>
+            <p class="modal-card-title">Error! </p>
           </header>
           <section class="modal-card-body">
-            <p>Modal Search Button</p>
+            <p>Please fill in the search field.</p>
+          </section>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modalError0">
+        <div class="modal-background" id="modal-Error0"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">Error!</p>
+          </header>
+          <section class="modal-card-body">
+            <p>There are no more searches for that topic, please type a new topic!</p>
+          </section>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modalError1">
+        <div class="modal-background" id="modal-Error1"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">Error!</p>
+          </header>
+          <section class="modal-card-body">
+            <p>There was an error gathering the data from the website, press search again or type a new topic.</p>
           </section>
           </footer>
         </div>
@@ -118,11 +144,8 @@
     </div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="modalscript.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
- 
+    <!-- <script src="modalscript.js"></script> -->
     <script src="./assets/script.js"></script>
 </body>
-
 
 </html>

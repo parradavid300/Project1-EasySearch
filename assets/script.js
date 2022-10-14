@@ -54,6 +54,7 @@ function summarizeAPI(url){
         }
         catch(err){
             //include modal to display that there was an error gathering the data
+            modalError1.classList.add("is-active");
             console.log('ERROR IN NEWS ARTICLE')
         }
     })
@@ -132,6 +133,17 @@ var searchButton=document.getElementById("searchButton");
 var clearButton=document.getElementById('clearButton');
 var againButton=document.getElementById('againButton');
 var searches=localStorage.getItem('searches');
+var aboutNav = document.querySelector("#about-modal")
+var modalBackground = document.querySelector(".modal-background")
+var modal = document.querySelector(".modal")
+var searchbtnModal = document.querySelector("#searchButton")
+var modalTwo = document.querySelector("#modalTwo")
+var modalBackground2 = document.querySelector("#modal-backgroundTwo")
+var modalError0 = document.querySelector("#modalError0")
+var modalBackgroundError0 = document.querySelector("#modal-Error0")
+var modalError1 = document.querySelector("#modalError1")
+var modalBackgroundError1 = document.querySelector("#modal-Error1")
+
 
 var topicNum;
 var dataNumber;
@@ -153,9 +165,13 @@ clearButton.addEventListener('click',function(){
 });
 
 searchButton.addEventListener("click", function (){
-    searchingAPI(searchBar.value);
-    var cardContent=JSON.parse(localStorage.getItem('data'+dataNumber));
-    outputSummary(cardContent);
+    if (searchBar.value ==''){
+        modalTwo.classList.add("is-active");
+    }else{
+        searchingAPI(searchBar.value);
+        var cardContent=JSON.parse(localStorage.getItem('data'+dataNumber));
+        outputSummary(cardContent);
+    }
 
 });
   
@@ -168,7 +184,30 @@ againButton.addEventListener('click',function(){
         outputSummary(cardContent);
     }else{
         //include modal to say that there are no more searches for that topic
+        modalError0.classList.add("is-active");
         console.log('Reached the end of news articles for that topic! please input a new topic')
     }
 
 });
+// Modal Variables
+
+// Click on about and Modal appears
+aboutNav.addEventListener("click", function (){
+    modal.classList.add("is-active");
+})
+
+// Removes Modal from screen
+modalBackground.addEventListener("click", function(){
+    modal.classList.remove("is-active");
+})
+
+modalBackground2.addEventListener("click", function (){
+    modalTwo.classList.remove("is-active")
+})
+
+modalBackgroundError0.addEventListener("click", function (){
+    modalError0.classList.remove("is-active")
+})
+modalBackgroundError1.addEventListener("click", function (){
+    modalError1.classList.remove("is-active")
+})
