@@ -6,7 +6,7 @@ function searchingAPI(topic){
         "url": "https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/search/NewsSearchAPI?q="+search+"&pageNumber=1&pageSize=10&autoCorrect=true&fromPublishedDate=null&toPublishedDate=null",
         "method": "GET",
         "headers": {
-            "X-RapidAPI-Key": "b1cd874ba9mshbb1dbfdf1946d17p1b49d1jsn18b3f8089701",
+            "X-RapidAPI-Key": ,
             "X-RapidAPI-Host": "contextualwebsearch-websearch-v1.p.rapidapi.com"
         }
     };
@@ -37,7 +37,7 @@ function summarizeAPI(url){
 		"url": "https://extracting-essential-information-from-news-articles-url.p.rapidapi.com/extractfromArticle?url="+input1,
 		"method": "GET",
 		"headers": {
-			"X-RapidAPI-Key": "b1cd874ba9mshbb1dbfdf1946d17p1b49d1jsn18b3f8089701",
+			"X-RapidAPI-Key": ,
 			"X-RapidAPI-Host": "extracting-essential-information-from-news-articles-url.p.rapidapi.com"
 		}
 	};
